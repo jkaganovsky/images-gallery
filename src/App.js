@@ -5,22 +5,24 @@ import Search from './components/Search';
 
 const UNSPLASH_KEY = process.env.REACT_APP_UNSPLASH_KEY;
 
-function App () {
-  const [ word, setWord ] = useState( '' );
+function App() {
+  const [word, setWord] = useState('');
 
-  function handleSearchSubmit ( e ) {
+  function handleSearchSubmit(e) {
     e.preventDefault();
     console.log(word);
     // console.log(e.target[0].value);
-    fetch( `https://api.unsplash.com/photos/random/?query=${ word }&client_id=${ UNSPLASH_KEY }` )
-      .then( ( res ) => res.json() )
-      .then( ( data ) => {
+    fetch(
+      `https://api.unsplash.com/photos/random/?query=${word}&client_id=${UNSPLASH_KEY}`,
+    )
+      .then((res) => res.json())
+      .then((data) => {
         console.log(data);
-      } )
-      .catch( ( err ) => {
+      })
+      .catch((err) => {
         console.log(err);
-      } )
-    setWord( '' );
+      });
+    setWord('');
   }
 
   // console.log( word );
@@ -29,7 +31,12 @@ function App () {
   return (
     <div>
       <Header title="Images Gallery" />
-      <Search word={ word } setWord={ setWord } title="Search" handleSubmit={ handleSearchSubmit } />
+      <Search
+        word={word}
+        setWord={setWord}
+        title="Search"
+        handleSubmit={handleSearchSubmit}
+      />
     </div>
   );
 }
