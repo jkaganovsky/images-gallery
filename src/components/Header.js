@@ -11,7 +11,7 @@ function Header({ title }) {
     <Navbar style={navbarStyle} data-bs-theme="light">
       <Container>
         {/* <Navbar.Brand href="/">{title}</Navbar.Brand> */}
-        <Logo atl={ title } style={{ maxWidth: '12rem', maxHeight: '2rem' }} />
+        <Logo atl={title} style={{ maxWidth: '12rem', maxHeight: '2rem' }} />
       </Container>
     </Navbar>
   );
