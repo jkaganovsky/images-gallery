@@ -1,0 +1,12 @@
+{
+  "eslint.validate": [
+    "html",
+    "javascript",
+    "javascriptreact"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.tabSize": 2,
+  "python.pythonPath": "api/.venv/bin/python3"
+}
